@@ -1,5 +1,5 @@
 {
-  "name": "docs-exporter",
+  "name": "data-exporter",
   "version": "0.0.1",
   "description": "Export data to many file formats",
   "main": "index.js",
