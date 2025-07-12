@@ -1,0 +1,37 @@
+{
+  "name": "docs-exporter",
+  "version": "0.0.1",
+  "description": "Export data to many file formats",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/codemastersolutions/data-exporter.git"
+  },
+  "keywords": [
+    "cms",
+    "code",
+    "master",
+    "solutions",
+    "codemastersolutions",
+    "data",
+    "exporter",
+    "excel",
+    "pdf",
+    "word",
+    "csv",
+    "json",
+    "txt"
+  ],
+  "author": "CodeMaster Soluções",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codemastersolutions/data-exporter/issues"
+  },
+  "homepage": "https://github.com/codemastersolutions/data-exporter#readme",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
