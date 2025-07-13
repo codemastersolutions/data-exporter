@@ -2,8 +2,9 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "NodeNext",
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./dist",
+    "sourceRoot": "./src",
     "declaration": true,
     "sourceMap": true,
     "moduleResolution": "NodeNext",
@@ -16,9 +17,11 @@
     "lib": ["ES2023"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    }
+      "@/*": ["src/*"],
+      "@tests/*": ["tests/*"]
+    },
+    "rootDirs": ["src", "tests"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

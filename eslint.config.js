@@ -1,22 +1,32 @@
-const tseslint = await import('typescript-eslint');
-const prettier = await import('eslint-plugin-prettier');
+import tseslint from 'typescript-eslint';
+import prettier from 'eslint-plugin-prettier';
+import prettierConfig from 'eslint-config-prettier';
 
-export default [
+export default tseslint.config(
+  {
+    ignores: ['dist', 'node_modules', 'coverage', 'docs'],
+  },
   {
     files: ['**/*.ts'],
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        project: './tsconfig.json',
-      },
-    },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
       prettier,
     },
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: true,
+      },
+    },
     rules: {
       ...tseslint.configs.recommended.rules,
-      'prettier/prettier': 'error',
+      ...prettierConfig.rules,
+      'prettier/prettier': [
+        'error',
+        {
+          endOfLine: 'auto',
+        },
+      ],
     },
   },
-];
+);

@@ -3,14 +3,23 @@
   "version": "0.0.1",
   "description": "Export data to many file formats",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
     "test": "vitest",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "docs": "typedoc",
     "release": "semantic-release",
-    "release-it": "release-it"
+    "release-it": "release-it",
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
