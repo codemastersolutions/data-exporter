@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { helloWorld } from '../src/index'
+import { helloWorld } from '../src/index.js'
 
 describe('helloWorld', () => {
   it('should return "Hello, World!" and log it to the console', () => {
