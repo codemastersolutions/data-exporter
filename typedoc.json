@@ -1,0 +1,12 @@
+{
+  "entryPoints": ["src"],
+  "out": "docs",
+  "exclude": ["**/*.test.ts", "node_modules", "dist"],
+  "name": "Data Exporter Documentation",
+  "readme": "README.md",
+  "theme": "default",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "hideGenerator": true
+}

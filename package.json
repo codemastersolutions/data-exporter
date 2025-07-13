@@ -1,10 +1,16 @@
 {
-  "name": "docs-exporter",
+  "name": "data-exporter",
   "version": "0.0.1",
   "description": "Export data to many file formats",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "vitest",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "docs": "typedoc",
+    "release": "semantic-release",
+    "release-it": "release-it"
   },
   "repository": {
     "type": "git",
@@ -32,6 +38,37 @@
   },
   "homepage": "https://github.com/codemastersolutions/data-exporter#readme",
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "release-it": "^19.0.3",
+    "semantic-release": "^24.2.7",
+    "typedoc": "^0.28.7",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "typescript-eslint": "^8.36.0"
   }
 }
